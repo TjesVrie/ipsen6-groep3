@@ -19,4 +19,12 @@ public class MainActivity extends Activity {
         
         //Hoi, ik zit naast Alister.
     }
+    
+    /*
+     * Simple method by Tjesco, doing fuck all
+     */
+    public void doStuff()
+    {
+    	// do stuff
+    }
 }
