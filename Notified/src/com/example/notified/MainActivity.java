@@ -21,10 +21,11 @@ public class MainActivity extends Activity {
     }
     
     /*
-     * Simple method by Tjesco, doing fuck all
+     * Simple method by Tjesco, doing everything you need
      */
     public void doStuff()
     {
     	// do stuff
+    	// deleted branch yet?
     }
 }
