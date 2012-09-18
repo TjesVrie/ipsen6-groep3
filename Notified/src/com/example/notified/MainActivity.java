@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 	private String ask(String question) {
 		int i = question.length();
 		int answer = new java.util.Random().nextInt(i);
+		answer++;
 		return ("Antwoord #" + answer);
 	}
 }
