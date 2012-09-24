@@ -16,14 +16,16 @@ public class Custom_ExpandableListView extends Activity {
  
 	private ArrayList<String> groups;
 	private ArrayList<ArrayList<ArrayList<String>>> childs;
+	private int lastExpandedGroupPosition;
+	private ExpandableListView l;
  
    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        System.out.println("part 3 after setlayout");
-        setContentView(R.layout.main);
+        
+        setContentView(R.layout.mededelingoverzicht);
 
-        ExpandableListView l = (ExpandableListView) findViewById(R.id.ExpandableList);
+        l = (ExpandableListView) findViewById(R.id.ExpandableList);
  
         loadData();
         
@@ -45,7 +47,16 @@ public class Custom_ExpandableListView extends Activity {
             this.children = childs;
         }
  
- 
+    	public void onGroupExpanded(int groupPosition){
+            //collapse the old expanded group, if not the same
+            //as new group to expand
+            if(groupPosition != lastExpandedGroupPosition){
+                l.collapseGroup(lastExpandedGroupPosition);
+            }
+
+            super.onGroupExpanded(groupPosition);           
+            lastExpandedGroupPosition = groupPosition;
+        }
     	
         public boolean areAllItemsEnabled()
         {

@@ -7,6 +7,7 @@
     android:background="@color/GREY"
     android:orientation="vertical" >
 
+ 
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
@@ -19,15 +20,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
             
-            
 				<TextView
-		        android2:id="@+id/textView1"
-		        android2:layout_width="fill_parent"
-		        android2:layout_height="wrap_content"
-		        android2:layout_centerInParent="true"
-		        android2:text="Search Result 111"
-		        android2:textAppearance="?android:attr/textAppearanceLarge"
-		        android2:background="@drawable/back" />
+		        android:id="@+id/textView1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Searchit"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:background="@drawable/back" />
 			
 				<TextView
 		        android2:id="@+id/textView2"
@@ -85,13 +84,9 @@
 				android2:text="Search Result 888"
 				android2:textAppearance="?android:attr/textAppearanceLarge"/>
 				
-																
-																
-												
-												
-          
-              
         </LinearLayout>
     </ScrollView>
+																				
+																
 
 </RelativeLayout>
