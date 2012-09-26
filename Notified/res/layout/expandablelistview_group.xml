@@ -12,6 +12,7 @@
 		android:layout_height="50px"
 		android:layout_marginLeft="50px"
 		android:gravity="center_vertical"
+		android:onClick="Open"
 	>
 	</TextView>
  

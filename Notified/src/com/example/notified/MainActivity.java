@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
     
     public void ShowOverzicht(View sender) 
     {
-
+    	
     	Intent intent = new Intent(this, Custom_ExpandableListView.class);
     	startActivity(intent);
 

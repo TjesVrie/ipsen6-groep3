@@ -34,6 +34,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.notified.MainActivity" />
         </activity>
+           <activity
+            android:name=".InfoModule"
+            android:label="@string/title_Info_Module" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

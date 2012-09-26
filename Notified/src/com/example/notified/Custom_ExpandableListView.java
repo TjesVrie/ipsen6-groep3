@@ -4,23 +4,30 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.TextView;
  
 public class Custom_ExpandableListView extends Activity {
  
-	private ArrayList<String> groups;
-	private ArrayList<ArrayList<ArrayList<String>>> childs;
+	private ArrayList<String> groups= new ArrayList<String>();
+	private ArrayList<ArrayList<ArrayList<String>>> childs= new ArrayList<ArrayList<ArrayList<String>>>();
 	private int lastExpandedGroupPosition;
 	private ExpandableListView l;
- 
+	public final static String EXTRA_MESSAGE = "WERKT NIET";
+
+	
+	
+	
    @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) 
+   {
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.mededelingoverzicht);
@@ -31,7 +38,25 @@ public class Custom_ExpandableListView extends Activity {
         
         myExpandableAdapter adapter = new myExpandableAdapter(this, groups, childs);
 		l.setAdapter(adapter);
+		
+		final Intent intent = new Intent(this, InfoModule.class);
+		
+		l.setOnChildClickListener(new OnChildClickListener() {
+
+	        public boolean onChildClick(ExpandableListView parent, View v,
+	                int groupPosition, int childPosition, long id) {
+	        	
+	        	
+	        	intent.putExtra(EXTRA_MESSAGE, childs.get(groupPosition).get(childPosition).toString());
+	        	startActivity(intent);
+	        	
+	            return false;
+	        }
+	    });
     }
+   
+	
+ 
  
     public class myExpandableAdapter extends BaseExpandableListAdapter {
  
@@ -57,6 +82,8 @@ public class Custom_ExpandableListView extends Activity {
             super.onGroupExpanded(groupPosition);           
             lastExpandedGroupPosition = groupPosition;
         }
+    	
+
     	
         public boolean areAllItemsEnabled()
         {
@@ -141,9 +168,9 @@ public class Custom_ExpandableListView extends Activity {
  
     }
  
-    private void loadData(){
-    	groups= new ArrayList<String>();
-    	childs= new ArrayList<ArrayList<ArrayList<String>>>();
+    private void loadData()
+    {
+
  
     	groups.add("Iad1");
         groups.add("Ipsen6");

@@ -8,11 +8,7 @@
     android:orientation="vertical" >
 
  
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:background="@color/WHITE">
+   
 
 
         <LinearLayout
@@ -85,7 +81,7 @@
 				android2:textAppearance="?android:attr/textAppearanceLarge"/>
 				
         </LinearLayout>
-    </ScrollView>
+ 
 																				
 																
 

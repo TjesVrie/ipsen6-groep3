@@ -14,4 +14,5 @@
     <string name="title_activity_display_message">Search</string>
 	<string name="title_Custom_ExpandableListView">Overzichten subed</string>
 	<string name="TextvoorVeld">searcherresutl</string>
+	<string name="title_Info_Module">title_Info_Module</string>
 </resources>
