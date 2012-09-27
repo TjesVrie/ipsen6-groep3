@@ -41,6 +41,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.notified.MainActivity" />
         </activity>
+        <activity
+            android:name=".InfoMededeling"
+            android:label="@string/title_Info_Mededeling" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
