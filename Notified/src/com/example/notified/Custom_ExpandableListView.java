@@ -1,7 +1,7 @@
 package com.example.notified;
 
 import java.util.ArrayList;
-
+import android.widget.ExpandableListView.OnGroupClickListener;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -53,6 +53,20 @@ public class Custom_ExpandableListView extends Activity {
 	            return false;
 	        }
 	    });
+		
+		l.setOnGroupClickListener(new OnGroupClickListener() {
+		
+		
+
+		public boolean onGroupClick(ExpandableListView parent, View v,
+				int groupPosition, long id) {
+			
+			System.out.println("HELLO part");
+			return false;
+		}
+
+	
+    });
     }
    
 	
