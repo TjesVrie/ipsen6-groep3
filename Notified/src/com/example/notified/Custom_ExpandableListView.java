@@ -64,12 +64,13 @@ public class Custom_ExpandableListView extends Activity {
 			System.out.println("HELLO part");
 			return false;
 		}
-
-	
     });
     }
-   
-	
+
+   public int multiply(int x, int y) 
+   {
+	    return x / y;
+   }
  
  
     public class myExpandableAdapter extends BaseExpandableListAdapter {
