@@ -20,6 +20,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
+          <activity
+            android:name=".Custom_ExpandableListView"
+            android:label="@string/title_Custom_ExpandableListView" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
+           <activity
+            android:name=".InfoModule"
+            android:label="@string/title_Info_Module" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
+        <activity
+            android:name=".InfoMededeling"
+            android:label="@string/title_Info_Mededeling" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notified.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
